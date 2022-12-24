@@ -1,5 +1,3 @@
-
-
 let dropdown = document.getElementById('locality-dropdown');
 dropdown.length = 0;
 
@@ -68,15 +66,22 @@ async function renderTrains(inputUrl) {
   
 
     trains.Trains.forEach(train => {
-        let htmlSegment = `<div class="user">
-                            <h2>${train.Line} ${train.DestinationName}</h2>
-                            <p>${train.LocationName} - ${train.Min}</p>
-                        </div>`;
+        let htmlSegment = `<div class="card my-2">
+        <div class="card-body row">
+            <div class="col-2 col-sm-2 d-flex justify-content-center align-items-center">
+                <div class="${train.Line}-circle ">${train.Line}</div>
+              </div>
+          <div class="col-10 col-sm-10">
+              <h5 class="card-title">${train.DestinationName} - ${train.Min}`+( train.Min == "BRD" ? '' : (train.Min == "ARR"? "": " mins"))+`</h5>
+              <p class="card-text"><small class="text-muted">Cars: `+(train.Car == "null"? "-": train.Car) +`</small></p>
+          </div>
+        </div>
+  </div>`;
 
         html += htmlSegment;
     });
 
-    let container = document.querySelector('.container');
+    let container = document.querySelector('.trainData');
     container.innerHTML = html;
 }
 
