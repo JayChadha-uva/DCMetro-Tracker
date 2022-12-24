@@ -39,9 +39,6 @@ fetch(url)
         var op = new Option(tmpAry[i][0], tmpAry[i][1]);
         dropdown.options[i] = op;
     }
-
-
-
       });  
     }  
   )  
@@ -49,61 +46,54 @@ fetch(url)
     console.error('Fetch Error -', err);  
   });
 
-
-
-  // sort
-  function sortSelect(selElem) {
-    var tmpAry = new Array();
-    for (var i=0;i<selElem.options.length;i++) {
-        tmpAry[i] = new Array();
-        tmpAry[i][0] = selElem.options[i].text;
-        tmpAry[i][1] = selElem.options[i].value;
-    }
-    tmpAry.sort();
-    while (selElem.options.length > 0) {
-        selElem.options[0] = null;
-    }
-    for (var i=0;i<tmpAry.length;i++) {
-        var op = new Option(tmpAry[i][0], tmpAry[i][1]);
-        selElem.options[i] = op;
-    }
-    return;
-}
-
-sortSelect(document.getElementById('locality-dropdown'))
+ 
 
 
   // ************************************************
 
-  const trainsUrl = "https://api.wmata.com/StationPrediction.svc/json/GetPrediction/All?&api_key=a052505d81424fbda940445715069fa3"
-  async function getTrains() {
-      let url = trainsUrl;
-      try {
-          let res = await fetch(url);
-          return await res.json();
-      } catch (error) {
-          console.log(error);
-      }
-  }
+
+  async function getTrains(inputUrl) {
+    let url = inputUrl;
+    try {
+        let res = await fetch(url);
+        return await res.json();
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+async function renderTrains(inputUrl) {
+    let trains = await getTrains(inputUrl);
+    let html = '';
   
-  async function renderTrains() {
-      let trains = await getTrains();
-      let html = '';
-    
-  
-      trains.Trains.forEach(train => {
-          let htmlSegment = `<div class="user">
-                              <h2>${train.Line} ${train.DestinationName}</h2>
-                              <p>${train.LocationName} - ${train.Min}</p>
-                          </div>`;
-  
-          html += htmlSegment;
-      });
-  
-      let container = document.querySelector('.container');
-      container.innerHTML = html;
-  }
-  
-  renderTrains();
-  
+
+    trains.Trains.forEach(train => {
+        let htmlSegment = `<div class="user">
+                            <h2>${train.Line} ${train.DestinationName}</h2>
+                            <p>${train.LocationName} - ${train.Min}</p>
+                        </div>`;
+
+        html += htmlSegment;
+    });
+
+    let container = document.querySelector('.container');
+    container.innerHTML = html;
+}
+
+
+document.addEventListener('input', function (event) {
+
+	// Only run on our select menu
+	if (event.target.id !== 'locality-dropdown') return;
+
+	// The selected value
+	console.log(event.target.value);
+
+	// The selected option element
+	console.log(event.target.options[event.target.selectedIndex]);
+
+    let trainsUrl = `https://api.wmata.com/StationPrediction.svc/json/GetPrediction/${event.target.value}?&api_key=a052505d81424fbda940445715069fa3`
+      renderTrains(trainsUrl);
+
+}, false);
   
