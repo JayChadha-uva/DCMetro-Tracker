@@ -76,7 +76,7 @@ async function renderTrains(inputUrl) {
         html += htmlSegment;
     });
 
-    let container = document.querySelector('.container');
+    let container = document.querySelector('.trainData');
     container.innerHTML = html;
 }
 
