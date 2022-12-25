@@ -23,7 +23,7 @@ async function renderIncidents(inputUrl) {
         }
         let dateStr = new Date(incident.DateUpdated).toString().split(" GMT")[0]
 
-        let htmlSegment = `<div class=" card my-2">
+        let htmlSegment = `<div class=" card my-3 border-0 rounded-4">
         <div class="card-body">
             <div class="container">
                 <div class="row">
