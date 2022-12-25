@@ -18,21 +18,21 @@
         display: inline-block;
         vertical-align: middle;
         padding-bottom: 0vw;
-        width: 9vw;
+        width: 12vw;
         max-width: 60px;
         max-height: 60px;
-        height: 9vw;
+        height: 12vw;
       }
       .RD-circle p {
         display: inline-block;
-        font-size: min(4.1vw, 27px);
-        margin: 0 0 0 max(-9vw, -60px);
+        font-size: min(5.5vw, 27px);
+        margin: 0 0 0 max(-12vw, -60px);
         padding: 0;
         font-family:"Helvetica Neue";
         color: white;
         vertical-align: middle;
         white-space: normal;
-        width: 9vw;
+        width: 12vw;
         font-weight: bold;
         max-width: 60px;
         max-height: 60px;
@@ -52,20 +52,20 @@
         display: inline-block;
         vertical-align: middle;
         padding-bottom: 0vw;
-        width: 9vw;
+        width: 12vw;
         max-width: 60px;
         max-height: 60px;
-        height: 9vw;
+        height: 12vw;
       }
       .OR-circle p {
         display: inline-block;
-        font-size: min(4.1vw, 27px);
-        margin: 0 0 0 max(-9vw, -60px);
+        font-size: min(5.5vw, 27px);
+        margin: 0 0 0 max(-12vw, -60px);
         padding: 0;
         font-family:"Helvetica Neue";
         vertical-align: middle;
         white-space: normal;
-        width: 9vw;
+        width: 12vw;
         font-weight: bold;
         max-width: 60px;
         max-height: 60px;
@@ -85,21 +85,21 @@
         display: inline-block;
         vertical-align: middle;
         padding-bottom: 0vw;
-        width: 9vw;
+        width: 12vw;
         max-width: 60px;
         max-height: 60px;
-        height: 9vw;
+        height: 12vw;
       }
       .BL-circle p {
         display: inline-block;
-        font-size: min(4.1vw, 27px);
-        margin: 0 0 0 max(-9vw, -60px);
+        font-size: min(5.5vw, 27px);
+        margin: 0 0 0 max(-12vw, -60px);
         padding: 0;
         color:white;
         font-family:"Helvetica Neue";
         vertical-align: middle;
         white-space: normal;
-        width: 9vw;
+        width: 12vw;
         font-weight: bold;
         max-width: 60px;
         max-height: 60px;
@@ -119,21 +119,21 @@
         display: inline-block;
         vertical-align: middle;
         padding-bottom: 0vw;
-        width: 9vw;
+        width: 12vw;
         max-width: 60px;
         max-height: 60px;
-        height: 9vw;
+        height: 12vw;
       }
       .GR-circle p {
         display: inline-block;
-        font-size: min(4.1vw, 27px);
-        margin: 0 0 0 max(-9vw, -60px);
+        font-size: min(5.5vw, 27px);
+        margin: 0 0 0 max(-12vw, -60px);
         padding: 0;
         color:white;
         font-family:"Helvetica Neue";
         vertical-align: middle;
         white-space: normal;
-        width: 9vw;
+        width: 12vw;
         font-weight: bold;
         max-width: 60px;
         max-height: 60px;
@@ -154,20 +154,20 @@
     display: inline-block;
     vertical-align: middle;
     padding-bottom: 0vw;
-    width: 9vw;
+    width: 12vw;
     max-width: 60px;
     max-height: 60px;
-    height: 9vw;
+    height: 12vw;
   }
   .YL-circle p {
     display: inline-block;
-    font-size: min(4.1vw, 27px);
-    margin: 0 0 0 max(-9vw, -60px);
+    font-size: min(5.5vw, 27px);
+    margin: 0 0 0 max(-12vw, -60px);
     padding: 0;
     font-family:"Helvetica Neue";
     vertical-align: middle;
     white-space: normal;
-    width: 9vw;
+    width: 12vw;
     max-width: 60px;
     font-weight: bold;
     max-height: 60px;
@@ -187,21 +187,21 @@
     display: inline-block;
     vertical-align: middle;
     padding-bottom: 0vw;
-    width: 9vw;
+    width: 12vw;
     max-width: 60px;
     max-height: 60px;
-    height: 9vw;
+    height: 12vw;
   }
   .SV-circle p {
     display: inline-block;
-    font-size: min(4.1vw, 27px);
-    margin: 0 0 0 max(-9vw, -60px);
+    font-size: min(5.5vw, 27px);
+    margin: 0 0 0 max(-12vw, -60px);
     padding: 0;
     font-family:"Helvetica Neue";
     vertical-align: middle;
     white-space: normal;
     font-weight: bold;
-    width: 9vw;
+    width: 12vw;
     max-width: 60px;
     max-height: 60px;
   }
