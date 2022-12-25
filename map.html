@@ -15,7 +15,7 @@
           <div class="navbar-nav">
 
             <div class="d-flex">
-              <a class="nav-link me-3" href="map.html">Map</a>
+              <a class="nav-link me-3 active" href="map.html">Map</a>
               <a class="nav-link ms-3" href="incidents.html">Service Disruptions</a>
             </div>
           </div>
@@ -23,15 +23,11 @@
       </nav>
 
       <div class="container my-3">
-        <label for="locality-dropdown" class="my-2">Select a Station</label>
-        <div class="d-flex justify-content-between mb-2">
-            <select class="form-select form-select-lg me-2 rounded-3 border-0" id="locality-dropdown" name="locality"></select>
-            <button id="refresh" type="button" class="btn btn-primary ms-2 click rounded-3" style="background-color: #34626C; border: none; opacity: 0.99;"><i class="bi bi-arrow-clockwise"></i></button>
-        </div>
+        <img class="resize_fit_center" src = "2022-System-Map.svg" alt="Metro System Map"/>
+        <p class="mt-4">Credit: WMATA 2022</p>
       </div>
 
 <div class="trainData container"></div>
 
-<script src="index.js"></script>
 </body>
 </html>
