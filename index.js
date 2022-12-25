@@ -125,4 +125,12 @@ document.addEventListener('input', function (event) {
     window.history.pushState(null, '', urlTOT.toString());
 
 }, false);
+
+document.querySelector('.click').addEventListener('click', (e) => {
+    // Do whatever you want
+    let params2 = new URLSearchParams(urlTOT.search);
+    let stationCode = params2.get("station")
+    let trainsUrl = `https://api.wmata.com/StationPrediction.svc/json/GetPrediction/${stationCode}?&api_key=a052505d81424fbda940445715069fa3`
+    renderTrains(trainsUrl);
+  });
   
