@@ -85,10 +85,10 @@ async function renderTrains(inputUrl) {
     let html = '';
 
     trains.Trains.forEach(train => {
-        let htmlSegment = `<div class="card my-2">
+        let htmlSegment = `<div class="card my-3 border-0 rounded-4">
         <div class="card-body row">
             <div class="col-auto">
-                <div class="${train.Line}-circle "><p>${train.Line}</p></div>
+                <div class="${train.Line}-circle "><p>`+(train.Line == "No"? "": train.Line)+`</p></div>
               </div>
           <div class="col">
               <h5 class="card-title">${train.DestinationName} - ${train.Min}`+( train.Min == "BRD" ? '' : (train.Min == "ARR"? "": " mins"))+`</h5>
@@ -128,9 +128,10 @@ document.addEventListener('input', function (event) {
 
 document.querySelector('.click').addEventListener('click', (e) => {
     // Do whatever you want
-    let params2 = new URLSearchParams(urlTOT.search);
-    let stationCode = params2.get("station")
-    let trainsUrl = `https://api.wmata.com/StationPrediction.svc/json/GetPrediction/${stationCode}?&api_key=a052505d81424fbda940445715069fa3`
-    renderTrains(trainsUrl);
+    // let params2 = new URLSearchParams(urlTOT.search);
+    // let stationCode = params2.get("station")
+    // let trainsUrl = `https://api.wmata.com/StationPrediction.svc/json/GetPrediction/${stationCode}?&api_key=a052505d81424fbda940445715069fa3`
+    // renderTrains(trainsUrl);
+    location.reload();
   });
   

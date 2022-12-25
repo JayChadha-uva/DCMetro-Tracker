@@ -27,6 +27,7 @@
         vertical-align: middle;
         white-space: normal;
         width: 9vw;
+        font-weight: bold;
         max-width: 60px;
         max-height: 60px;
       }
@@ -59,6 +60,7 @@
         vertical-align: middle;
         white-space: normal;
         width: 9vw;
+        font-weight: bold;
         max-width: 60px;
         max-height: 60px;
       }
@@ -92,6 +94,7 @@
         vertical-align: middle;
         white-space: normal;
         width: 9vw;
+        font-weight: bold;
         max-width: 60px;
         max-height: 60px;
       }
@@ -125,6 +128,7 @@
         vertical-align: middle;
         white-space: normal;
         width: 9vw;
+        font-weight: bold;
         max-width: 60px;
         max-height: 60px;
       }
@@ -159,6 +163,7 @@
     white-space: normal;
     width: 9vw;
     max-width: 60px;
+    font-weight: bold;
     max-height: 60px;
   }
 
@@ -189,6 +194,7 @@
     font-family:"Helvetica Neue";
     vertical-align: middle;
     white-space: normal;
+    font-weight: bold;
     width: 9vw;
     max-width: 60px;
     max-height: 60px;
