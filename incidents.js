@@ -32,7 +32,7 @@ async function renderIncidents(inputUrl) {
                   </div>
                   <div class="col">
                     <h5 class="card-title " >${incident.IncidentType}</h5>
-                    <p class="card-text">${incident.Description}</p>
+                    <p class="card-text mb-2">${incident.Description}</p>
                     <p class="card-text"><small class="text-muted">Last Updated: ${dateStr}</small></p>  
                 </div>
                 </div>
