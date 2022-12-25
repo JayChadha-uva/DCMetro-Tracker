@@ -1,6 +1,7 @@
 .RD-circle
     {
     height:100%;
+    
     aspect-ratio: 1 / 1;
     border-radius:50%;
     font-size:150%;
@@ -40,6 +41,7 @@
     .GR-circle
     {
     height:100%;
+    min-width: 100%;
     aspect-ratio: 1 / 1;
     border-radius:50%;
     font-size:150%;
@@ -52,9 +54,9 @@
 
     .YL-circle
     {
-    height:100%;
-    aspect-ratio: 1 / 1;
-    border-radius:50%;
+    border-radius: 50%;
+    width: 100%;
+    padding-bottom: 100%;
     font-size:150%;
     color:black;
     line-height:2.5;
@@ -62,6 +64,45 @@
     font-family:"Helvetica Neue";
     background:#FFD100
     }
+
+
+
+.circle {
+    display: inline-block;
+    min-width: 15%;
+    text-align: center;
+    /* to allow placement of numbers on top of circles instead of below them */
+    white-space: nowrap;
+  }
+  
+  .circle:before {
+    border-radius: 50%;
+    margin: min(0.5vw, 15px) 0px;
+    background: #FFD100;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    
+    padding-bottom: 0vw;
+    width: 9vw;
+    max-width: 75px;
+    max-height: 75px;
+    height: 9vw;
+  }
+  
+  .circle p {
+    display: inline-block;
+    font-size: min(3.25vw, 30px);
+    margin: 0 0 0 max(-9vw, -75px);
+    padding: 0;
+    font-family:"Helvetica Neue";
+    vertical-align: middle;
+    white-space: normal;
+    width: 9vw;
+    max-width: 75px;
+    max-height: 75px;
+    
+  }
 
     .SV-circle
     {

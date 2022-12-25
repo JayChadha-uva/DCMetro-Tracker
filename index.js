@@ -92,7 +92,7 @@ async function renderTrains(inputUrl) {
               </div>
           <div class="col-10 col-sm-10">
               <h5 class="card-title">${train.DestinationName} - ${train.Min}`+( train.Min == "BRD" ? '' : (train.Min == "ARR"? "": " mins"))+`</h5>
-              <p class="card-text"><small class="text-muted">Cars: `+(train.Car == "null"? "-": train.Car) +`</small></p>
+              <p class="card-text"><small class="text-muted">Cars: `+((train.Car == null) ? "-": train.Car) +`</small></p>
           </div>
         </div>
   </div>`;
