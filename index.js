@@ -20,11 +20,23 @@ fetch(url)
       // Access json data
       response.json().then(function(data) {  
         let option;
+
+        stationDict = {}
+
+        for (let i = 0; i < data.Stations.length; i++) {
+            if (data.Stations[i].Name in stationDict){
+                stationDict[data.Stations[i].Name] = stationDict[data.Stations[i].Name] + ","+data.Stations[i].Code
+            }
+            else{
+                stationDict[data.Stations[i].Name] = data.Stations[i].Code
+            }
+        }
+
         // fill in options to stations dropdown
-    	for (let i = 0; i < data.Stations.length; i++) {
+    	for (var key in stationDict) {
           option = document.createElement('option');
-      	  option.text = data.Stations[i].Name;
-      	  option.value = data.Stations[i].Code;
+      	  option.text = key;
+      	  option.value = stationDict[key];
       	  dropdown.add(option);
     	}
         
