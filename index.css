@@ -1,118 +1,195 @@
-.RD-circle
-    {
-    height:100%;
-    
-    aspect-ratio: 1 / 1;
-    border-radius:50%;
-    font-size:150%;
-    color:white;
-    line-height:2.5;
-    text-align:center;
-    font-family:"Helvetica Neue";
-    background:#BF0D3E
-    }
+    .RD-circle {
+        display: inline-block;
+        min-width: 15%;
+        text-align: center;
+        white-space: nowrap;
+      }
+      .RD-circle:before {
+        border-radius: 50%;
+        margin: min(0.5vw, 15px) 0px;
+        background: #BF0D3E;
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        padding-bottom: 0vw;
+        width: 9vw;
+        max-width: 60px;
+        max-height: 60px;
+        height: 9vw;
+      }
+      .RD-circle p {
+        display: inline-block;
+        font-size: min(4.1vw, 27px);
+        margin: 0 0 0 max(-9vw, -60px);
+        padding: 0;
+        font-family:"Helvetica Neue";
+        color: white;
+        vertical-align: middle;
+        white-space: normal;
+        width: 9vw;
+        max-width: 60px;
+        max-height: 60px;
+      }
 
-    .OR-circle
-    {
-    height:100%;
-    aspect-ratio: 1 / 1;
-    border-radius:50%;
-    font-size:150%;
-    color:black;
-    line-height:2.5;
-    text-align:center;
-    font-family:"Helvetica Neue";
-    background:#ED8B00
-    }
+    .OR-circle {
+        display: inline-block;
+        min-width: 15%;
+        text-align: center;
+        white-space: nowrap;
+      }
+      .OR-circle:before {
+        border-radius: 50%;
+        margin: min(0.5vw, 15px) 0px;
+        background: #ED8B00;
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        padding-bottom: 0vw;
+        width: 9vw;
+        max-width: 60px;
+        max-height: 60px;
+        height: 9vw;
+      }
+      .OR-circle p {
+        display: inline-block;
+        font-size: min(4.1vw, 27px);
+        margin: 0 0 0 max(-9vw, -60px);
+        padding: 0;
+        font-family:"Helvetica Neue";
+        vertical-align: middle;
+        white-space: normal;
+        width: 9vw;
+        max-width: 60px;
+        max-height: 60px;
+      }
+  
+    .BL-circle {
+        display: inline-block;
+        min-width: 15%;
+        text-align: center;
+        white-space: nowrap;
+      }
+      .BL-circle:before {
+        border-radius: 50%;
+        margin: min(0.5vw, 15px) 0px;
+        background: #009CDE;
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        padding-bottom: 0vw;
+        width: 9vw;
+        max-width: 60px;
+        max-height: 60px;
+        height: 9vw;
+      }
+      .BL-circle p {
+        display: inline-block;
+        font-size: min(4.1vw, 27px);
+        margin: 0 0 0 max(-9vw, -60px);
+        padding: 0;
+        color:white;
+        font-family:"Helvetica Neue";
+        vertical-align: middle;
+        white-space: normal;
+        width: 9vw;
+        max-width: 60px;
+        max-height: 60px;
+      }
+ 
+    .GR-circle {
+        display: inline-block;
+        min-width: 15%;
+        text-align: center;
+        white-space: nowrap;
+      }
+      .GR-circle:before {
+        border-radius: 50%;
+        margin: min(0.5vw, 15px) 0px;
+        background: #00B140;
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        padding-bottom: 0vw;
+        width: 9vw;
+        max-width: 60px;
+        max-height: 60px;
+        height: 9vw;
+      }
+      .GR-circle p {
+        display: inline-block;
+        font-size: min(4.1vw, 27px);
+        margin: 0 0 0 max(-9vw, -60px);
+        padding: 0;
+        color:white;
+        font-family:"Helvetica Neue";
+        vertical-align: middle;
+        white-space: normal;
+        width: 9vw;
+        max-width: 60px;
+        max-height: 60px;
+      }
 
-    .BL-circle
-    {
-    height:100%;
-    aspect-ratio: 1 / 1;
-    border-radius:50%;
-    font-size:150%;
-    color:white;
-    line-height:2.5;
-    text-align:center;
-    font-family:"Helvetica Neue";
-    background:#009CDE
-    }
 
-    .GR-circle
-    {
-    height:100%;
-    min-width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius:50%;
-    font-size:150%;
-    color:white;
-    line-height:2.5;
-    text-align:center;
-    font-family:"Helvetica Neue";
-    background:#00B140
-    }
-
-    .YL-circle
-    {
-    border-radius: 50%;
-    width: 100%;
-    padding-bottom: 100%;
-    font-size:150%;
-    color:black;
-    line-height:2.5;
-    text-align:center;
-    font-family:"Helvetica Neue";
-    background:#FFD100
-    }
-
-
-
-.circle {
+.YL-circle {
     display: inline-block;
     min-width: 15%;
     text-align: center;
-    /* to allow placement of numbers on top of circles instead of below them */
     white-space: nowrap;
   }
-  
-  .circle:before {
+  .YL-circle:before {
     border-radius: 50%;
     margin: min(0.5vw, 15px) 0px;
     background: #FFD100;
     content: '';
     display: inline-block;
     vertical-align: middle;
-    
     padding-bottom: 0vw;
     width: 9vw;
-    max-width: 75px;
-    max-height: 75px;
+    max-width: 60px;
+    max-height: 60px;
     height: 9vw;
   }
-  
-  .circle p {
+  .YL-circle p {
     display: inline-block;
-    font-size: min(3.25vw, 30px);
-    margin: 0 0 0 max(-9vw, -75px);
+    font-size: min(4.1vw, 27px);
+    margin: 0 0 0 max(-9vw, -60px);
     padding: 0;
     font-family:"Helvetica Neue";
     vertical-align: middle;
     white-space: normal;
     width: 9vw;
-    max-width: 75px;
-    max-height: 75px;
-    
+    max-width: 60px;
+    max-height: 60px;
   }
 
-    .SV-circle
-    {
-    height:100%;
-    aspect-ratio: 1 / 1;
-    border-radius:50%;
-    font-size:150%;
-    color:black;
-    line-height:2.5;
-    text-align:center;
+  .SV-circle {
+    display: inline-block;
+    min-width: 15%;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .SV-circle:before {
+    border-radius: 50%;
+    margin: min(0.5vw, 15px) 0px;
+    background: #919D9D;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 0vw;
+    width: 9vw;
+    max-width: 60px;
+    max-height: 60px;
+    height: 9vw;
+  }
+  .SV-circle p {
+    display: inline-block;
+    font-size: min(4.1vw, 27px);
+    margin: 0 0 0 max(-9vw, -60px);
+    padding: 0;
     font-family:"Helvetica Neue";
-    background:#919D9D
-    }
+    vertical-align: middle;
+    white-space: normal;
+    width: 9vw;
+    max-width: 60px;
+    max-height: 60px;
+  }
