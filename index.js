@@ -1,3 +1,5 @@
+const urlTOT = new URL(window.location);
+
 let dropdown = document.getElementById('locality-dropdown');
 dropdown.length = 0;
 
@@ -60,7 +62,7 @@ fetch(url)
     }
 }
 
-async function renderTrains(inputUrl) {
+async function renderTrains(inputUrl, stationCode) {
     let trains = await getTrains(inputUrl);
     let html = '';
   
@@ -85,6 +87,15 @@ async function renderTrains(inputUrl) {
     container.innerHTML = html;
 }
 
+let params = new URLSearchParams(urlTOT.search);
+
+if(params.has('station')){
+    let stationCode = params.get("station")
+    let trainsUrl = `https://api.wmata.com/StationPrediction.svc/json/GetPrediction/${stationCode}?&api_key=a052505d81424fbda940445715069fa3`
+    renderTrains(trainsUrl, stationCode);
+}
+
+urlTOT.searchParams.get('station');
 
 document.addEventListener('input', function (event) {
 
@@ -98,7 +109,9 @@ document.addEventListener('input', function (event) {
 	console.log(event.target.options[event.target.selectedIndex]);
 
     let trainsUrl = `https://api.wmata.com/StationPrediction.svc/json/GetPrediction/${event.target.value}?&api_key=a052505d81424fbda940445715069fa3`
-      renderTrains(trainsUrl);
+    renderTrains(trainsUrl, event.target.value);
+    urlTOT.searchParams.set('station', event.target.value);
+    window.history.pushState(null, '', urlTOT.toString());
 
 }, false);
   
