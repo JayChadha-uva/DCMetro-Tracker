@@ -10,5 +10,4 @@ Only framework used is Bootstrap 5.2
 
 
 Written and Developed by Jay Chadha
-
 All rights reserved. Credit this repo if used
