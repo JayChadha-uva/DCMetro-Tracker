@@ -87,12 +87,12 @@ async function renderTrains(inputUrl) {
     trains.Trains.forEach(train => {
         let htmlSegment = `<div class="card my-2">
         <div class="card-body row">
-            <div class="col-2 col-sm-2 d-flex justify-content-center align-items-center">
-                <div class="${train.Line}-circle ">${train.Line}</div>
+            <div class="col-auto">
+                <div class="${train.Line}-circle "><p>${train.Line}</p></div>
               </div>
-          <div class="col-10 col-sm-10">
+          <div class="col">
               <h5 class="card-title">${train.DestinationName} - ${train.Min}`+( train.Min == "BRD" ? '' : (train.Min == "ARR"? "": " mins"))+`</h5>
-              <p class="card-text"><small class="text-muted">Cars: `+(train.Car == "null"? "-": train.Car) +`</small></p>
+              <p class="card-text"><small class="text-muted">Cars: `+((train.Car == null) ? "-": train.Car) +`</small></p>
           </div>
         </div>
   </div>`;
