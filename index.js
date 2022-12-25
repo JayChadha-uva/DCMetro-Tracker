@@ -88,7 +88,7 @@ async function renderTrains(inputUrl) {
         let htmlSegment = `<div class="card my-3 border-0 rounded-4">
         <div class="card-body row">
             <div class="col-auto">
-                <div class="${train.Line}-circle "><p>${train.Line}</p></div>
+                <div class="${train.Line}-circle "><p>`+(train.Line == "No"? "": train.Line)+`</p></div>
               </div>
           <div class="col">
               <h5 class="card-title">${train.DestinationName} - ${train.Min}`+( train.Min == "BRD" ? '' : (train.Min == "ARR"? "": " mins"))+`</h5>
