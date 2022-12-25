@@ -1,21 +1,26 @@
+// Get URL Search params
+const urlTOT = new URL(window.location);
+let params1 = new URLSearchParams(urlTOT.search);
+
+// initialize the dropdown "select"
 let dropdown = document.getElementById('locality-dropdown');
 dropdown.length = 0;
 
+// API call to fetch all stations
 const url = 'https://api.wmata.com/Rail.svc/json/jStations?&api_key=a052505d81424fbda940445715069fa3';
-
 fetch(url)  
   .then(  
     function(response) {  
       if (response.status !== 200) {  
-        console.warn('Looks like there was a problem. Status Code: ' + 
+        console.warn('Error. Status Code: ' + 
           response.status);  
         return;  
       }
 
-      // Examine the text in the response  
+      // Access json data
       response.json().then(function(data) {  
         let option;
-    
+        // fill in options to stations dropdown
     	for (let i = 0; i < data.Stations.length; i++) {
           option = document.createElement('option');
       	  option.text = data.Stations[i].Name;
@@ -23,20 +28,26 @@ fetch(url)
       	  dropdown.add(option);
     	}
         
+        // sort station drop down alphabetically
         var tmpAry = new Array();
-    for (var i=0;i<dropdown.options.length;i++) {
-        tmpAry[i] = new Array();
-        tmpAry[i][0] = dropdown.options[i].text;
-        tmpAry[i][1] = dropdown.options[i].value;
-    }
-    tmpAry.sort();
-    while (dropdown.options.length > 0) {
-        dropdown.options[0] = null;
-    }
-    for (var i=0;i<tmpAry.length;i++) {
-        var op = new Option(tmpAry[i][0], tmpAry[i][1]);
-        dropdown.options[i] = op;
-    }
+        for (var i=0;i<dropdown.options.length;i++) {
+            tmpAry[i] = new Array();
+            tmpAry[i][0] = dropdown.options[i].text;
+            tmpAry[i][1] = dropdown.options[i].value;
+        }
+        tmpAry.sort();
+        while (dropdown.options.length > 0) {
+            dropdown.options[0] = null;
+        }
+        for (var i=0;i<tmpAry.length;i++) {
+            var op = new Option(tmpAry[i][0], tmpAry[i][1]);
+            dropdown.options[i] = op;
+        }
+
+        // Update dropdown to be what is in the search params
+        let stationCode = params1.get("station")
+        document.getElementById('locality-dropdown').value=stationCode
+
       });  
     }  
   )  
@@ -45,11 +56,7 @@ fetch(url)
   });
 
  
-
-
-  // ************************************************
-
-
+// Fetch trains at each station function
   async function getTrains(inputUrl) {
     let url = inputUrl;
     try {
@@ -60,10 +67,10 @@ fetch(url)
     }
 }
 
+// render the trains accordingly in cards using bootstrap
 async function renderTrains(inputUrl) {
     let trains = await getTrains(inputUrl);
     let html = '';
-  
 
     trains.Trains.forEach(train => {
         let htmlSegment = `<div class="card my-2">
@@ -77,7 +84,6 @@ async function renderTrains(inputUrl) {
           </div>
         </div>
   </div>`;
-
         html += htmlSegment;
     });
 
@@ -85,20 +91,26 @@ async function renderTrains(inputUrl) {
     container.innerHTML = html;
 }
 
+// Get search params and go to that station if station code in url
+let params = new URLSearchParams(urlTOT.search);
 
-document.addEventListener('input', function (event) {
+// only fetch stationcode valid in the params
+if(params.has('station')){
+    let stationCode = params.get("station")
+    let trainsUrl = `https://api.wmata.com/StationPrediction.svc/json/GetPrediction/${stationCode}?&api_key=a052505d81424fbda940445715069fa3`
+    renderTrains(trainsUrl);  
+}
 
-	// Only run on our select menu
+urlTOT.searchParams.get('station');
+
+// fetch trains when new options selected
+document.addEventListener('input', function (event) {	
 	if (event.target.id !== 'locality-dropdown') return;
 
-	// The selected value
-	console.log(event.target.value);
-
-	// The selected option element
-	console.log(event.target.options[event.target.selectedIndex]);
-
     let trainsUrl = `https://api.wmata.com/StationPrediction.svc/json/GetPrediction/${event.target.value}?&api_key=a052505d81424fbda940445715069fa3`
-      renderTrains(trainsUrl);
+    renderTrains(trainsUrl);
+    urlTOT.searchParams.set('station', event.target.value);
+    window.history.pushState(null, '', urlTOT.toString());
 
 }, false);
   

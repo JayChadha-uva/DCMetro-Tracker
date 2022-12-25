@@ -1,11 +1,11 @@
 .RD-circle
     {
-    width:60px;
-    height:60px;
-    border-radius:30px;
-    font-size:25px;
+    height:100%;
+    aspect-ratio: 1 / 1;
+    border-radius:50%;
+    font-size:150%;
     color:white;
-    line-height:60px;
+    line-height:2.5;
     text-align:center;
     font-family:"Helvetica Neue";
     background:#BF0D3E
@@ -13,12 +13,12 @@
 
     .OR-circle
     {
-    width:60px;
-    height:60px;
-    border-radius:30px;
-    font-size:25px;
+    height:100%;
+    aspect-ratio: 1 / 1;
+    border-radius:50%;
+    font-size:150%;
     color:black;
-    line-height:60px;
+    line-height:2.5;
     text-align:center;
     font-family:"Helvetica Neue";
     background:#ED8B00
@@ -26,12 +26,12 @@
 
     .BL-circle
     {
-    width:60px;
-    height:60px;
-    border-radius:30px;
-    font-size:25px;
+    height:100%;
+    aspect-ratio: 1 / 1;
+    border-radius:50%;
+    font-size:150%;
     color:white;
-    line-height:60px;
+    line-height:2.5;
     text-align:center;
     font-family:"Helvetica Neue";
     background:#009CDE
@@ -39,12 +39,12 @@
 
     .GR-circle
     {
-    width:60px;
-    height:60px;
-    border-radius:30px;
-    font-size:25px;
+    height:100%;
+    aspect-ratio: 1 / 1;
+    border-radius:50%;
+    font-size:150%;
     color:white;
-    line-height:60px;
+    line-height:2.5;
     text-align:center;
     font-family:"Helvetica Neue";
     background:#00B140
@@ -52,12 +52,12 @@
 
     .YL-circle
     {
-    width:60px;
-    height:60px;
-    border-radius:30px;
-    font-size:25px;
+    height:100%;
+    aspect-ratio: 1 / 1;
+    border-radius:50%;
+    font-size:150%;
     color:black;
-    line-height:60px;
+    line-height:2.5;
     text-align:center;
     font-family:"Helvetica Neue";
     background:#FFD100
@@ -65,12 +65,12 @@
 
     .SV-circle
     {
-    width:60px;
-    height:60px;
-    border-radius:30px;
-    font-size:25px;
+    height:100%;
+    aspect-ratio: 1 / 1;
+    border-radius:50%;
+    font-size:150%;
     color:black;
-    line-height:60px;
+    line-height:2.5;
     text-align:center;
     font-family:"Helvetica Neue";
     background:#919D9D
